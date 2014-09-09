@@ -66,6 +66,14 @@ function ndebug.trace(...)
     
 end
 
+function ndebug.get_time_str()
+    local date = os.date("*t", os.time())
+    local sz_space = '-'
+    local sz_date = date.year..sz_space..date.month..sz_space..date.day..sz_space..date.hour..sz_space..date.min..sz_space..date.sec
+    return sz_date
+end
+
+
 print(" ndebug.lua loaded ")
 
 -- ndebug.trace(1,2,3)
